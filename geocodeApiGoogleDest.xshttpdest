@@ -1,0 +1,10 @@
+host = "maps.googleapis.com";
+port = 80; 
+description = "Google Geocoding API";
+useSSL = false;
+pathPrefix = "/maps/api/geocode/json";
+authType = none;
+useProxy = false;
+proxyHost = "";
+proxyPort = 0;
+timeout = 0;
