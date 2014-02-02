@@ -43,12 +43,14 @@ URL Parameters
 
 Sample URLs
 -----------
-All URLs will start as usual, ````http://<server>:80<instance>/<package path>/
+All URLs will start as usual, with server name and package path, then the name of the service and it's parameters as shown below.
 
 **Example 1**
 Simulate the update of 10 records to table "GEODATA"."testtable01", with 400ms delay between calls, logging to screen, and storing result of geocode API call in the field STATUS.  The field to select on is COUNTRY (ie search for records with COUNTRY=NULL) and the fields to write to are ZIP and COUNTRY. 
+
 	geodataEnrich.xsjs?schema=GEODATAENRICH&table=testtable01&maxrecs=10&mindelayms=400&log=active&simulate=active&fldblank=COUNTRY&fldstat=STATUS&fldpost=ZIP&fldcty=COUNTRY
 
 **Example 2**
 Actual update of 2000 records, with 100ms delay between calls, with no logging.  The field to select on is COUNTRY and the fields to write to are POSTCODE, REGION and SUBREGION. 
+
 	geodataEnrich.xsjs?schema=GEODATAENRICH&table=testtable01&maxrecs=2000&mindelayms=100&fldblank=COUNTRY&fldpost=POSTCODE&fldad1=REGION&fldad2=SUBREGION
